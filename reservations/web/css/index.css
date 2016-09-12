@@ -1,0 +1,62 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 9/09/2016, 10:51:36 PM
+    Author     : disable
+*/
+
+body{
+//    background-image: url(../img/salaJuntasmod1.jpg)!important;
+//    background-image: url(../img/salaJuntasmod2.jpg)!important;
+//    background-image: url(../img/salaJuntasmod3.jpg)!important;
+    background-image: url(../img/salaJuntasmod4.jpg)!important;
+//    background-image: url(../img/salaJuntasmod5.jpg)!important;
+    background-size:100%256%;
+}
+.ui-widget-content{
+    font-size:95% !important;
+    //  background-image: url(../img/metalbackground3.jpg)!important;
+    border-radius: 0.6em!important;
+    -webkit-border-radius:0.6em!important;
+    box-shadow: rgba(0,0,0,0.9) 10px,10px,10px!important;
+    //margin: 1em auto!important;
+    //padding: 2em!important;
+    //width: 300px!important;
+    text-align: center!important;
+    font-family: Verdana,Arial,Helvetica,sans-serif!important;
+}
+
+.image-ring{
+    border: 0 none;
+    margin: auto;
+    margin-top: 200px;
+    width: 20%!important;
+    height: 20%!important;
+}
+
+.ui-ring-item{
+    border: 0 none;
+    margin-top: 180px;
+    width: 70%!important;
+    height: 70%!important;
+    background: #e0e1fd!important;
+    opacity: 0.75!important;
+}
+
+h3{
+    color: darkblue;
+}
+
+.panelGrid{
+    margin: auto;
+    text-align: center;
+    vertical-align: central;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
+    width: 100%!important;
+    height: 100%!important;
+}

@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Inicio</title>
+        <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+        <link href="css/index.css" rel="stylesheet" type="text/css"/>
+        <script type="text/javascript">
+            function validar(){
+                if($("#user").val() == ""){
+                 PF('login').show();   
+                }
+            }
+        </script>
+    </h:head>
+    <h:body>
+        <h:form id ="form">
+            <input type="hidden" id="user" value="#{session.getAttribute('user')}"/>
+            <p:ring id="custom" value="#{ejbLogin.images}" var="image" styleClass="image-ring">
+                <p:graphicImage id="img" value="./img/#{image}" onclick="validar();"/>
+            </p:ring>
+            
+            <p:dialog header="Inicio Sesión" widgetVar="login" modal="true" showEffect="fade" hideEffect="fade" resizable="false">
+                <p:panelGrid id="panelGrid" columns="2" columnClasses="label,value" styleClass="panelGrid">
+                    <h:outputText value="Usuario:"/>
+                    <p:inputText placeholder="Usuario" value="#{ejbLogin.usuario.nombre}"/>
+                    <h:outputText value="Contraseña: "/>
+                    <p:password placeholder="Password" value="#{ejbLogin.usuario.password}"/>
+                </p:panelGrid>
+                <p:panelGrid id="panelGridButton" columns="1" columnClasses="label,value" styleClass="panelGrid">
+                    <p:commandButton value="Iniciar" action="#{ejbLogin.login()}"/>
+                </p:panelGrid>
+            </p:dialog>
+        </h:form>
+    </h:body>
+</html>
+
